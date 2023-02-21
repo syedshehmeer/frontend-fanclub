@@ -33,7 +33,7 @@ export default function Login() {
         })
       );
       console.log(res.data + "res.data hai ye");
-      window.location = `/profile/${data.slug}`;
+      window.location = `/`;
       // window.localStorage.setItem("isLoggedIn", true);
     } catch (error) {
       if (
