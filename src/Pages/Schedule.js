@@ -42,15 +42,13 @@ const Meetings = React.memo((props) => {
               <div className="bookedMeeting">
                 <div className="bookedMeeting__title">
                   <strong>
-                    meeting id : {users._id}
-                    <br />
-                    <strong>{users.name}</strong>
+                    <strong>Celebrity : {users.name}</strong>
                     <br />
                   </strong>
                 </div>
                 <div className="bookedMeeting__time">
-                  <strong>{users.date}</strong>
-                  <strong>{users.time}</strong>
+                  <strong>Date : {users.date}</strong>
+                  <strong>Time : {users.time}</strong>
                   {/* <strong>{users.cost}</strong> */}
                 </div>
                 <button onClick={() => handleJoinMeeting(users._id)}>
@@ -105,7 +103,7 @@ const CelebMeetings = React.memo(() => {
               >
                 <div className="bookedMeeting">
                   <div className="bookedMeeting__title">
-                    <strong>Meeting ID : {meeting._id}</strong>
+                    <strong>Fan Username: {meeting.fanSlug}</strong>
                   </div>
                   <div className="bookedMeeting__title">
                     <strong>Cost : {meeting.total_cost}</strong>
