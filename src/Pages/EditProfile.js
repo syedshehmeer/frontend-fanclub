@@ -28,6 +28,7 @@ function EditProfile({ currentId, setCurrentId }) {
   const [name, setName] = useState("");
   const [bio, setBio] = useState("");
   const [category, setCategory] = useState("");
+  const [bankDetails, setBankDetails] = useState("");
   // save image
   const [image, setImage] = useState("");
   const [id, setId] = useState("");
@@ -65,6 +66,7 @@ function EditProfile({ currentId, setCurrentId }) {
             setName(resp.data.celebrities.name);
             setBio(resp.data.celebrities.bio);
             setCategory(resp.data.celebrities.category);
+            setBankDetails(resp.data.celebrities.bank_details);
             setImage(resp.data.celebrities.image);
             setId(resp.data.celebrities._id);
           });
@@ -89,6 +91,7 @@ function EditProfile({ currentId, setCurrentId }) {
         name: name,
         bio: bio,
         category: category,
+        bankDetails: bankDetails,
       }
     );
     // image only
@@ -171,7 +174,23 @@ function EditProfile({ currentId, setCurrentId }) {
                   }}
                 />
               </div>
+              <div className="userUpdateItem">
+                <label style={{ color: "black" }}>BankDetails</label>
+                <input
+                  type="text"
+                  minLength="10"
+                  maxLength="16"
+                  required
+                  placeholder={celeb.bankDetails}
+                  className="userUpdateInput"
+                  value={bankDetails}
+                  onChange={(e) => {
+                    setBankDetails(e.target.value);
+                  }}
+                />
+              </div>
             </div>
+            <br />
             <div className="userUpdateRight">
               <div className="userUpdateUpload">
                 <img className="userUpdateImg" src={celeb.image} alt="" />
