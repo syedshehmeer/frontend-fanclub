@@ -1,3 +1,13 @@
+## Deployed Link
+
+Note: You may have to wait for 2 min for server to respond for the first time
+
+You can visit the deployed version of this project at the following link:
+
+  https://frontend-fanclub.onrender.com/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
