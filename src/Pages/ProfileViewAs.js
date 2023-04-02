@@ -59,7 +59,8 @@ const Meetings = React.memo(() => {
               >
                 <div className="bookedMeeting">
                   <div className="bookedMeeting__title">
-                    <strong>Meeting ID : {meeting._id}</strong>
+                    <strong>Meeting ID : </strong>
+                    <p>{meeting._id}</p>
                   </div>
                   <div className="bookedMeeting__title">
                     <strong>Cost : {meeting.total_cost}</strong>

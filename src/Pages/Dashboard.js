@@ -29,7 +29,7 @@ const TvIcons = React.memo(() => {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToScroll: 5,
     adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -40,7 +40,25 @@ const TvIcons = React.memo(() => {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -116,7 +134,25 @@ const FilmIcons = React.memo(() => {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -191,7 +227,25 @@ const Bloggers = React.memo(() => {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -266,7 +320,25 @@ const Youtubers = React.memo(() => {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,

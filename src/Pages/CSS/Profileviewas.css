@@ -21,7 +21,6 @@
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
-  min-width: 1000px;
 }
 
 .card {
@@ -77,21 +76,23 @@ img {
   background-color: white;
   justify-content: space-between;
   width: 100%;
-  height: 100px;
-  min-width: 1000px;
   padding: 10px;
 
   border-radius: 10px;
 }
 .bookedMeeting__title {
   display: flex;
-  width: 20%;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 25%;
 }
 .bookedMeeting__time {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-items: center;
+  align-items: center;
+  width: 25%;
 }
 
 .bookedMeeting > button {
@@ -102,4 +103,12 @@ img {
   margin-left: 10px;
   border-radius: 5px;
   color: white;
+}
+
+@media only screen and (max-width: 850px) {
+  .bookedMeeting {
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
 }

@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import "./CSS/profile.css";
+
 import React, { useEffect, useReducer, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Button from "@material-ui/core/Button";
