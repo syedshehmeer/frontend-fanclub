@@ -9,9 +9,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SearchResults from "./DashboardSearch";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const TvIcons = React.memo(() => {
   const [data, setData] = useState([]);
+  const [loading, isLoading] = useState(true);
 
   useEffect(() => {
     const func = async () => {
@@ -20,6 +23,7 @@ const TvIcons = React.memo(() => {
         .then((resp) => {
           return setData(resp.data.celebrities);
         });
+      isLoading(false);
     };
     func();
   }, []);
@@ -72,34 +76,43 @@ const TvIcons = React.memo(() => {
       <div className="section-header" style={{ marginTop: "50px" }}>
         TV Icons
       </div>
-      <Slider {...settings}>
-        {data
-          .filter((celeb) => celeb.category === "tv")
-          .map((celeb) => {
-            return (
-              <div key={celeb.id}>
-                <Col style={{ paddingBottom: "10px" }}>
-                  <div className="card" style={{ marginLeft: "50px" }}>
-                    <figure>
-                      <LazyLoadImage
-                        src={celeb.image}
-                        alt="Hotel"
-                        style={{ width: "400px", height: "250px" }}
-                      />
-                    </figure>
+      {loading ? (
+        <Backdrop
+          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      ) : (
+        <Slider {...settings}>
+          {data
+            .filter((celeb) => celeb.category === "tv")
+            .map((celeb) => {
+              return (
+                <div key={celeb.id}>
+                  <Col style={{ paddingBottom: "10px" }}>
+                    <div className="card" style={{ marginLeft: "50px" }}>
+                      <figure>
+                        <LazyLoadImage
+                          src={celeb.image}
+                          alt="Hotel"
+                          style={{ width: "400px", height: "250px" }}
+                        />
+                      </figure>
 
-                    <div className="card-body">
-                      <Link to={`/profile/view-as/${celeb.slug}`}>
-                        <h3 className="card-title">{celeb.name}</h3>
-                      </Link>
-                      <p className="card-text">{celeb.bio}</p>
+                      <div className="card-body">
+                        <Link to={`/profile/view-as/${celeb.slug}`}>
+                          <h3 className="card-title">{celeb.name}</h3>
+                        </Link>
+                        <p className="card-text">{celeb.bio}</p>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-              </div>
-            );
-          })}
-      </Slider>
+                  </Col>
+                </div>
+              );
+            })}
+        </Slider>
+      )}
     </div>
   );
 });
