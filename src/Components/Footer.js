@@ -13,15 +13,15 @@ export default function Footer() {
           <div className="col-4 col-md-6 col-sm-12">
             <div className="content">
               <div>
-                <i className="bx bx-movie-play bx-tada main-color"></i>Fan
-                <span className="main-color">C</span>lub
+                <i className="bx bx-movie-play bx-tada main-color"></i>Virtu
+                <span className="main-color">C</span>eleb
                 {/* <img src={logo} alt="" style={{ maxHeight: "80px", maxWidth: "80px" }} /> */}
               </div>
               <p>
-                FanClub is a platform that connects celebrities to their fans
-                through the website. FanClub allows fans to pay
-                their favorite celebrities for a one-to-one virtual conversation to experience
-                a new exposure of their lives.
+                VirtuCeleb is a platform that connects celebrities to their fans
+                through the website. VirtuCeleb allows fans to pay their
+                favorite celebrities for a one-to-one virtual conversation to
+                experience a new exposure of their lives.
               </p>
               <div className="social-list">
                 <a href="#" className="social-item">
@@ -47,7 +47,7 @@ export default function Footer() {
               <div className="col-3 col-md-6 col-sm-6">
                 <div className="content">
                   <p style={{ fontWeight: "bold", marginLeft: "30px" }}>
-                    FanClub
+                    VirtuCeleb
                   </p>
                   <ul className="footer-menu" style={{ marginTop: "-10px" }}>
                     <li>
@@ -133,6 +133,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-
   );
 }

@@ -148,7 +148,7 @@ export default function Navbar() {
             className="logo"
             style={{ marginTop: "-10px", marginLeft: "10px" }}
           >
-            Fan<span className="main-color">C</span>lub
+            Virtu<span className="main-color">C</span>eleb
           </div>
           <NavItems />
           {/* <!-- MOBILE MENU TOGGLE --> */}

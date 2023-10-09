@@ -1,4 +1,4 @@
-import { Grid, about1, about2, about3, styled } from "./imports"
+import { Grid, about1, about2, about3, styled } from "./imports";
 import "./CSS/AboutUs.css";
 import React from "react";
 function AboutUs() {
@@ -33,17 +33,17 @@ function AboutUs() {
   ];
 
   const Title = styled.p`
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 10px 0px 10px 20px; /* Tweak this to your liking (also add padding) */
-  letter-spacing: 3px;
-  `
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0px 10px 20px; /* Tweak this to your liking (also add padding) */
+    letter-spacing: 3px;
+  `;
   const Card = styled.div`
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-  width: 310px;
-  `
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    width: 310px;
+  `;
 
   return (
     <>
@@ -57,8 +57,13 @@ function AboutUs() {
         {/* End page title */}
         <div className="container">
           <div>
-            <h2 style={{ fontWeight: "bold", fontSize: "40px" }}>Meet The Founders</h2>
-            <h5 style={{ textAlign: "center" }}>The immensely talented team at FanClub is backed up by the following individuals</h5>
+            <h2 style={{ fontWeight: "bold", fontSize: "40px" }}>
+              Meet The Founders
+            </h2>
+            <h5 style={{ textAlign: "center" }}>
+              The immensely talented team at VirtuCeleb is backed up by the
+              following individuals
+            </h5>
           </div>
           {aboutUs_data.map((slide) => (
             <div className="column" style={{ marginTop: "30px" }}>
@@ -81,17 +86,14 @@ function AboutUs() {
                       justifyContent: "center",
                     }}
                     gap={2}
-                  >
-                  </Grid>
-                  <p>
-                  </p>
+                  ></Grid>
+                  <p></p>
                 </div>
               </Card>
             </div>
           ))}
         </div>
       </div>
-
     </>
   );
 }
