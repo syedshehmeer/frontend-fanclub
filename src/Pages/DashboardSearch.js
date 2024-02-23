@@ -32,22 +32,20 @@ const SearchResults = () => {
   }, [searchTerm, data]);
 
   return (
-    <div>
+    <div className="search">
       <TextField
         style={{
           margin: "15px",
-          width: "100%",
+
           alignItems: "center",
           justifyContent: "center",
           display: "flex",
         }}
+        size="medium"
         type="text"
         placeholder="Search celebrity"
         value={searchTerm}
-        color="error"
-        focused
         onChange={(e) => setSearchTerm(e.target.value)}
-        variant="outlined"
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">

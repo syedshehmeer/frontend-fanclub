@@ -417,13 +417,13 @@ const PrevArrow = (props) => {
 
 export default function Dashboard() {
   return (
-    <>
+    <div className="dashboard">
       <Categories />
       <SearchResults />
       <TvIcons />
       <FilmIcons />
       <Bloggers />
       <Youtubers />
-    </>
+    </div>
   );
 }

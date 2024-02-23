@@ -41,7 +41,7 @@ export default function CategoriesCard() {
               >
                 <Card sx={{ maxWidth: 500, maxHeight: "auto" }}>
                   <CardMedia
-                    sx={{ width: 500, maxHeight: 450, minHeight: 300 }}
+                    sx={{ width: 500, height: 400 }}
                     component="img"
                     height="120"
                     image={index.image}

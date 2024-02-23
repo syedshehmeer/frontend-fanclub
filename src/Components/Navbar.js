@@ -122,7 +122,7 @@ export default function Navbar() {
               <Link to={"/tvcategories"}>Tv Artist</Link>
               <Link to={"/filmcategories"}>Film Icons </Link>
               <Link to={"/bloggerscategories"}>Bloggers</Link>
-              <Link to={"/ytcategories"}>Yotubers</Link>
+              <Link to={"/ytcategories"}>Youtubers</Link>
             </div>
           </div>
 
@@ -148,7 +148,7 @@ export default function Navbar() {
             className="logo"
             style={{ marginTop: "-10px", marginLeft: "10px" }}
           >
-            Virtu<span className="main-color">C</span>eleb
+            VirtuCeleb
           </div>
           <NavItems />
           {/* <!-- MOBILE MENU TOGGLE --> */}

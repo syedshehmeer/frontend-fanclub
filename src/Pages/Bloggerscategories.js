@@ -1,5 +1,6 @@
 import { Grid, Typography, CardMedia, Card, CardContent } from "./imports";
 import { useEffect, useState } from "react";
+import "./CSS/categories.css";
 import React from "react";
 import axios from "axios";
 
@@ -41,7 +42,7 @@ export default function CategoriesCard() {
               >
                 <Card sx={{ maxWidth: 500, maxHeight: "auto" }}>
                   <CardMedia
-                    sx={{ width: 500, maxHeight: 500, minHeight: 300 }}
+                    sx={{ width: 500, height: 400 }}
                     component="img"
                     image={index.image}
                     alt="Bloggers"

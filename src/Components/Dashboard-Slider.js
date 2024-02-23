@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import Slider from "react-slick";
-import '../Pages/CSS/categories.css'
+import "../Pages/CSS/categories.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import banner1 from "./images/banner1.jpg";
@@ -16,7 +16,7 @@ function Categories(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    lazyLoad: true
+    lazyLoad: true,
   };
   const slidesData = [
     {
@@ -26,38 +26,35 @@ function Categories(props) {
     {
       id: 2,
       image: banner2,
-    }, {
+    },
+    {
       id: 3,
       image: banner3,
     },
   ];
   return (
     <>
-
       <div className="App">
         <div className="slider-wrapper">
-
           <Slider {...settings}>
-
-            {slidesData.map((slide) =>
-
+            {slidesData.map((slide) => (
               <div className="slick-slide" key={slide.id}>
-                <h2 className="slick-slide-title">  </h2>
-                <img className="slick-slide-image" src={slide.image} alt=""
+                <h2 className="slick-slide-title"> </h2>
+                <img
+                  className="slick-slide-image"
+                  src={slide.image}
+                  alt=""
                   style={{ height: "400px" }}
                 />
                 {/* <label className="slick-slide-label">{slide.label}</label> */}
               </div>
-            )}
-
+            ))}
           </Slider>
           <br />
-
         </div>
-
       </div>
     </>
-  )
+  );
 }
 
-export default Categories
+export default Categories;
